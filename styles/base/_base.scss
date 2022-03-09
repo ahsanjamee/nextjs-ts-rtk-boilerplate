@@ -1,0 +1,112 @@
+$primary-color: #408c99;
+$bg-color: #e6e4e4b7;
+$box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
+body {
+    font-family: 'Fredoka', sans-serif;
+}
+
+.btn-primary {
+    box-shadow: 0px 5px 7px -3px #276873;
+    background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+    background-color: #599bb3;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 8px 30px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #3d768a;
+    border: none;
+
+    &:hover {
+        background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+        background-color: #408c99;
+    }
+
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+.btn-secondary {
+    box-shadow: 0px 5px 7px -3px #276873;
+    background-color: #fff;
+    border-radius: 8px;
+    display: inline-block;
+    cursor: pointer;
+    color: $primary-color;
+    font-size: 16px;
+    padding: 8px 30px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #3d768a;
+    border: 1px solid $primary-color;
+
+    &:hover {
+        background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+        background-color: #408c99;
+        color: #fff;
+    }
+
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+}
+
+input {
+    border: 1px solid #e6e4e4;
+    border-radius: 8px;
+    padding: 8px;
+    width: 100%;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+        border: 1px solid $primary-color;
+    }
+}
+
+label {
+    font-size: 16px;
+    margin: 20px 0px 5px 0px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.card {
+    box-shadow: $box-shadow;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    width: 450px;
+    margin: 0 20px;
+
+    h1 {
+        font-weight: 500;
+        font-size: 24px;
+        margin-bottom: 0;
+    }
+
+    .card-header {
+        text-align: center;
+        font-weight: 600;
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
