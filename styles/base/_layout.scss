@@ -1,0 +1,29 @@
+.site-layout {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+    // padding: 20px;
+
+    .site-page-header {
+        .ant-page-header-heading-title {
+            margin-left: 18px;
+            color: $primary-color;
+        }
+    }
+}
+
+.sidebar-toggler {
+    background-color: #fff;
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 19px;
+    right: -16px;
+    cursor: pointer;
+    box-shadow: $box-shadow;
+    z-index: 5;
+}
