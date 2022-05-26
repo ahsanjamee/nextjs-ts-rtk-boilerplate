@@ -9,7 +9,10 @@ interface Image {
     };
 }
 
-export const initialState = [] as Image[];
+export const initialState = {
+    loading: false,
+    images: [] as Image[],
+};
 
 export const fetchImages = createAsyncThunk('image/fetchImages', async () => {
     const response = await httpServices.get('per_page=1');
@@ -21,8 +24,15 @@ export const imageSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: {
+        [fetchImages.pending.type]: (state) => {
+            state.loading = true;
+        },
         [fetchImages.fulfilled.type]: (state, { payload }: PayloadAction<Image[]>) => {
-            state.push(...payload);
+            state.images.push(...payload);
+            state.loading = false;
+        },
+        [fetchImages.rejected.type]: (state) => {
+            state.loading = false;
         },
     },
 });
