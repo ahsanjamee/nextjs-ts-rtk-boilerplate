@@ -4,23 +4,19 @@
 # Check Prettier standards
 npm run check-format ||
 (
-    echo 'Prettier Check Failed. Run npm run format, add changes and try commit again.';
+    echo 'Prettier Check Failed. Run npm run format.';
     false;
 )
 
 # Check ESLint Standards
 npm run lint ||
 (
-        echo 'ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+        echo 'ESLint Check Failed. Run npm run lint:fix.';
         false; 
 )
 
 npm run build ||
 (
-    echo 'Next build failed. 
-    '
+    echo 'Next build failed.'
     false;
 )
-
-# If everything passes... Now we can commit
-echo 'Everythings okay, committing this now... ✅✅✅✅'
